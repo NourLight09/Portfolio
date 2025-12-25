@@ -16,7 +16,6 @@ export default function Navbar() {
         if (path === '/') {
             return location.pathname === '/';
         }
-        // J'ai ajusté les chemins pour correspondre aux routes probables : /about, /projects, etc.
         return location.pathname.startsWith(path); 
     };
 
@@ -59,36 +58,12 @@ export default function Navbar() {
                     
                     {/* Desktop Navigation (Centre) */}
                     <nav aria-label="Navigation principale" className="hidden md:flex flex-1 justify-center gap-6 text- font-semibold text-white">
-                        <Link 
-                            className={`transition hover:text-[#7cf7ad] ${isActive('/') ? 'text-[#7cf7ad]' : ''}`} 
-                            to="/">
-                            Accueil
-                        </Link>
-                        <Link 
-                            className={`transition hover:text-[#7cf7ad] ${isActive('/about') ? 'text-[#7cf7ad]' : ''}`} 
-                            to="/about">
-                            À propos
-                        </Link>
-                        <Link 
-                            className={`transition hover:text-[#7cf7ad] ${isActive('/compétences') ? 'text-[#7cf7ad]' : ''}`} 
-                            to="/compétences">
-                            Compétences
-                        </Link>
-                        <Link 
-                            className={`transition hover:text-[#7cf7ad] ${isActive('/projects') ? 'text-[#7cf7ad]' : ''}`} 
-                            to="/projets">
-                            Projets
-                        </Link>
-                        <Link 
-                            className={`transition hover:text-[#7cf7ad] ${isActive('/blog') ? 'text-[#7cf7ad]' : ''}`} 
-                            to="/blog">
-                            Blog
-                        </Link>
-                        <Link 
-                            className={`transition hover:text-[#7cf7ad] ${isActive('/contact') ? 'text-[#7cf7ad]' : ''}`} 
-                            to="/contact">
-                            Contact
-                        </Link>
+                        <Link className={`transition hover:text-[#7cf7ad] ${isActive('/') ? 'text-[#7cf7ad]' : ''}`} to="/">Accueil</Link>
+                        <Link className={`transition hover:text-[#7cf7ad] ${isActive('/a-propos') ? 'text-[#7cf7ad]' : ''}`} to="/a-propos">À propos</Link>
+                        <Link className={`transition hover:text-[#7cf7ad] ${isActive('/compétences') ? 'text-[#7cf7ad]' : ''}`} to="/compétences">Compétences</Link>
+                        <Link className={`transition hover:text-[#7cf7ad] ${isActive('/projets') ? 'text-[#7cf7ad]' : ''}`} to="/projets">Projets</Link>
+                        <Link className={`transition hover:text-[#7cf7ad] ${isActive('/blog') ? 'text-[#7cf7ad]' : ''}`} to="/blog">Blog</Link>
+                        <Link className={`transition hover:text-[#7cf7ad] ${isActive('/contact') ? 'text-[#7cf7ad]' : ''}`} to="/contact">Contact</Link>
                     </nav>
 
                     {/* ✅ PARTIE DROITE : Icônes GitHub & LinkedIn */}
@@ -139,12 +114,15 @@ export default function Navbar() {
 
                 <nav className="flex flex-col gap-8 text-2xl font-semibold text-white text-center">
                     <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/') ? 'text-[#7cf7ad]' : ''}`} to="/">Accueil</Link>
-                    <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/about') ? 'text-[#7cf7ad]' : ''}`} to="/about">À propos</Link>
+                    <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/a-propos') ? 'text-[#7cf7ad]' : ''}`} to="/a-propos">À propos</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/compétences') ? 'text-[#7cf7ad]' : ''}`} to="/compétences">Compétences</Link>
-                    <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/projects') ? 'text-[#7cf7ad]' : ''}`} to="/projects">Projets</Link>
+                    <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/projets') ? 'text-[#7cf7ad]' : ''}`} to="/projets">Projets</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/blog') ? 'text-[#7cf7ad]' : ''}`} to="/blog">Blog</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/contact') ? 'text-[#7cf7ad]' : ''}`} to="/contact">Contact</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} className="uppercase text-[#7cf7ad] mt-4" to="/contact">Parlons-en</Link>
+                        useEffect(() => {
+                            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+                        }, [location.pathname]);
                     
                     {/* NOUVEL AJOUT : Icônes GitHub & LinkedIn dans le menu mobile */}
                     <div className="flex justify-center gap-6 mt-6">
