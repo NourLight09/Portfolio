@@ -11,6 +11,10 @@ export default function Navbar() {
     const headerRef = useRef(null);
     const location = useLocation(); 
 
+        useEffect(() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }, [location.pathname]);
+
     // Fonction pour vérifier si le lien est actif
     const isActive = (path) => {
         if (path === '/') {
@@ -66,7 +70,6 @@ export default function Navbar() {
                         <Link className={`transition hover:text-[#7cf7ad] ${isActive('/contact') ? 'text-[#7cf7ad]' : ''}`} to="/contact">Contact</Link>
                     </nav>
 
-                    {/* ✅ PARTIE DROITE : Icônes GitHub & LinkedIn */}
                     <div className="hidden md:flex items-center ml-auto gap-4">
                         <a 
                             href="https://github.com/NourLight09" 
@@ -120,9 +123,6 @@ export default function Navbar() {
                     <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/blog') ? 'text-[#7cf7ad]' : ''}`} to="/blog">Blog</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} className={`transition hover:text-[#7cf7ad] ${isActive('/contact') ? 'text-[#7cf7ad]' : ''}`} to="/contact">Contact</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} className="uppercase text-[#7cf7ad] mt-4" to="/contact">Parlons-en</Link>
-                        useEffect(() => {
-                            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-                        }, [location.pathname]);
                     
                     {/* NOUVEL AJOUT : Icônes GitHub & LinkedIn dans le menu mobile */}
                     <div className="flex justify-center gap-6 mt-6">

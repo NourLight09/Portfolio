@@ -27,6 +27,10 @@ function AppContent() {
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
 
     if (hasLoadedOnce) {
         setLoading(false); 

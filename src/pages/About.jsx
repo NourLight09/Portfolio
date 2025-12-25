@@ -181,7 +181,7 @@ function About() {
             <div className="bg-[#1C1C22] p-6 rounded-xl border border-white/5">
               <strong className="text-[#7cf7ad]">Bénévole au Resto du Cœur</strong> :
               <br />
-              J'aide à la distribution alimentaire et je m'occupe, si besoin, de la section Vêtements pour venir en aide aux plus démunis.
+              Depuis Novembre 2025, je suis bénévole au centre Léon Dardel des restos du coeur à Belfort. J'aide à la distribution alimentaire et je m'occupe, si besoin, de la section Vêtements.
             </div>
           </div>
         </div>
