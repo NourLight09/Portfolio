@@ -93,7 +93,7 @@ function Home() {
             <Link to="/contact" className="bg-[#7cf7ad] hover:bg-[#7cf7ad] text-black px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all shadow-lg shadow-[#7cf7ad]/20">
               Contactez-moi <ArrowRight size={20} />
             </Link>
-            <a href="/Cv%20Nourath%20AFFO%20.pdf" download="Cv_Nourath_AFFO.pdf" className="text-white hover:text-[#7cf7ad] font-semibold flex items-center gap-2 transition-colors group">
+            <a href="/Cv_Nourath_AFFO.pdf" download="Cv_Nourath_AFFO.pdf" className="text-white hover:text-[#7cf7ad] font-semibold flex items-center gap-2 transition-colors group">
               Téléchargez mon CV <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </a>
           </div>

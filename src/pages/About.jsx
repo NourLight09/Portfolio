@@ -103,7 +103,7 @@ function About() {
 
           <div className="pt-6">
     <a 
-      href="/Cv%20Nourath%20AFFO%20.pdf" 
+      href="/Cv_Nourath_AFFO.pdf" 
       download="Cv_Nourath_AFFO.pdf" 
       className="bg-[#7cf7ad] hover:bg-[#6be69d] text-black px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-2 transition-all shadow-lg shadow-[#7cf7ad]/20 hover:-translate-y-1"
     >
